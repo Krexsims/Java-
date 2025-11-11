@@ -1,0 +1,24 @@
+public class EndlessErrorLoop {
+    public static void main(String[] args) {
+        // Fake Java code (these lines do nothing)
+        // int a = 42;
+        // String message = "Running diagnostics...";
+        // System.out.println(message);
+        // for (int i = 0; i < 10; i++) {
+        //     System.out.println("Checking system " + i);
+        // }
+
+        // Actual infinite error loop
+        final String RED = "\u001B[31m"; // red text color
+        final String RESET = "\u001B[0m"; // reset color
+
+        while (true) { // runs forever
+            System.out.println(RED + "ERROR... ERRORRRR...FIX THE CODE U1123 L34.ERRORRR....shutdown system..." + RESET);
+            try {
+                Thread.sleep(100); // faster speed (100ms delay)
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
